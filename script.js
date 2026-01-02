@@ -2,7 +2,10 @@ const display = document.getElementById("display")
 
 // append value
 function appendValue(val) {
-    if (display.value ==="0"){
+    if (display.value.length >=10) {
+        return
+    }
+    if (display.value ==="0" ){
         display.value =val;
     }else{
         display.value +=val;
