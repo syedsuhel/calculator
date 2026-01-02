@@ -51,9 +51,9 @@ document.addEventListener("keyup",e=>{
     if (!isNaN(key)) {
         appendValue(key) //for number only
     } else if(["+","-","*","/"].includes(key)){
-        appendValue(key)
+        appendValue(key) //for operation
     }else if(key === "."){
-        appendValue(key)
+        appendValue(key) //for .
     }else if(key ==="Enter" || key === "="){
         calculateResult()
     }else if(key==="Escape"){
