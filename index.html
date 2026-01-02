@@ -16,12 +16,12 @@
 
             <header class="menuBar">
                 <!-- menu bar -->
-                <button class="menuButton"><a href="http://"><i class="fa-solid fa-list-ul"></i></a></button>
+                <button class="menuButton"><i class="fa-solid fa-list-ul"></i></button>
             </header>
     
             <section>
                 <!-- input value -->
-                <input class="placeholder" type="number" name="inputValue" placeholder="0" id="display">
+                <input class="placeholder" type="text" name="inputValue" placeholder="0" id="display">
             </section>
     
             <section>
@@ -31,15 +31,15 @@
                     <ul class="firstRow container valueSection">
                         
                         <li>
-                            <button class="buttonGray" onclick="">AC</button>
+                            <button class="buttonGray" onclick="clearDisplay()">AC</button>
                         </li>
 
                         <li>
-                            <button class="buttonGray" onclick=""><i class="fa-solid fa-plus-minus"></i></button>
+                            <button class="buttonGray" onclick="toggleSign()"><i class="fa-solid fa-plus-minus"></i></button>
                         </li>
 
                         <li>
-                            <button class="buttonGray" onclick=""><i class="fa-solid fa-percent"></i></button>
+                            <button class="buttonGray" onclick="percent()"><i class="fa-solid fa-percent"></i></button>
                         </li>
                         <li>
                             <button class="buttonOrange" onclick=""><i class="fa-solid fa-divide"></i></button>
@@ -104,7 +104,7 @@
                             <button onclick="">.</button>
                         </li>
                         <li>
-                            <button class="buttonOrange" onclick=""><i class="fa-solid fa-equals"></i></button>
+                            <button class="buttonOrange" onclick="calculateResult()"><i class="fa-solid fa-equals"></i></button>
                         </li>
                     </ul>
                     <!-- value section end here -->
