@@ -39,3 +39,25 @@ const calculateResult = ()=>{
         display.value="Error";
     }
 }
+// keyboard 
+
+document.addEventListener("keyup",e=>{
+    e.preventDefault();
+    const key =e.key;
+
+    if (!isNaN(key)) {
+        appendValue(key) //for number only
+    } else if(["+","-","*","/"].includes(key)){
+        appendValue(key)
+    }else if(key === "."){
+        appendValue(key)
+    }else if(key ==="Enter" || key === "="){
+        calculateResult()
+    }else if(key==="Escape"){
+        clearDisplay()
+    }else if (key==="%"){
+        percent();
+    }else if(key==="Backspace"){
+        display.value=display.value.slice(0.-1) || "0";
+    }
+})
